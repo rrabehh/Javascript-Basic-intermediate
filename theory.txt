@@ -1,0 +1,201 @@
+WEEK-7
+                                         JAVASCRIPT
+                                    ----------------------
+
+ JavaScript (JS) is a programming language mainly used to 
+ make websites interactive and dynamic.
+
+ execution context :
+  ===============
+  the environment where a piece of JavaScript code
+  is evaluated and executed.
+
+components:
+ memeory component:-variable enviornment 
+ .key value are stored
+
+code component:- thread of execution
+.code is executed one line at a time
+
+     * javascript is a synchronous single-threaded language*
+     meaning: js can show only one command at a time, 
+       in a specific order
+-------------------------------------------------------------------------
+
+Memory creation phase:
+JavaScript engine scans the code first before executing it.
+Code execution phase:
+After memory is set up, the JS engine runs the code line by line.
+-------------------------------------------------------------------------
+call stack: maintains the order of the execution context.
+-------------------------------------------------------------------------
+
+hoisting: 
+Behavior of moving variables and functions to the top of their scope.you can technically use functions or variables before they are declared
+
+-------------------------------------------------------------------------
+
+function:
+function in JavaScript is a block of reusable code that performs a specific task.
+
+types of functions : 
+--> function declaration
+--> function expression
+--> arrow function
+--> anonymous function
+--> generator Function
+--> immediate invoked function
+
+? what is pure function 
+
+? arrow function vs normal function 
+-------------------------------------------------------------------------
+Parameters → the argument passes throgh Parameters
+
+Arguments → the value which passes through the Parameters
+-------------------------------------------------------------------------
+Undefined:
+A variable is declared but not assigned any value.
+
+Not Defined:
+A variable is never declared in the code.
+
+--------------------------------------------------------------------------
+scope: variable and function is located or placed in the code the place where we can access it 
+
+global scope: outside function
+function scope: inside function
+block scope : with let and const  ...{} 
+lexical scope: variable can be accesssed from outside the scope
+module scope: can be used inside the module.
+
+-------------------------------------------------------------------------
+lexical environment:
+Every execution context has a lexical environment.
+A lexical environment = local memory + reference to parent.
+It enables scope chain
+
+scope chain: chain of lexical enviroonment linked together.
+
+-------------------------------------------------------------------------
+var :
+-----
+>Scope: Function-scoped .
+>Hoisting: Hoisted and initialized with undefined.
+>Redeclaration: Allowed.
+>Reassignment: Allowed.
+
+let :
+-----
+Scope: Block-scoped ({ }).
+Hoisting: Hoisted but stays in Temporal Dead Zone (TDZ) until initialized.
+Redeclaration: ❌ Not allowed in the same scope.
+Reassignment: ✅ Allowed.
+
+const :
+--------
+Scope: Block-scoped.
+Hoisting: Hoisted but in TDZ until initialized.
+Redeclaration: ❌ Not allowed.
+Reassignment: ❌ Not allowed.
+Must be initialized at declaration.
+
+--------------------------------------------------------------------------
+
+TDZ: Temporal dead zone
+the period between the creation of variable and its initialization where variable cannot be accessed.
+
+--------------------------------------------------------------------------
+ ES6- ECMA SCRIPT -6th edition.
+official standard for js is ecmascript.
+--------------------------------------------------------------------------
+
+type error= Happens when you use a value in a way that doesn’t match its type.
+(if you call a variable as a function it will be type error)
+
+syntax error= when problem occur in code rules
+
+reference error= happens when we try to use  variable that doesn't exist.
+
+--------------------------------------------------------------------------
+Block scope means that variables declared inside a pair of curly braces { } 
+are only accessible within that block.
+--------------------------------------------------------------------------
+Shadowing happens when a variable declared in an inner scope has the same name as a variable in an outer scope.
+
+Illegal shadowing :  happens when you try to shadow a variable declared with let or const using var in the same or inner scope.
+----------------------------------------------------------------------
+closure:
+function along with its lexical environment forms closure
+A closure allows an inner function to access variables from outer scopes.
+
+advantage of closure : 
+* encapsulation & data privasy 
+* variable inside the closure cannot be accessed from outside
+
+disadvantage of closure : 
+* memmory usage 
+* harder debugging 
+
+? what is debugger 
+it is a build in method for pausing the execution of the code 
+----------------------------------------------------------------------
+setTimeout : is a built-in JavaScript function that lets you schedule code to run after a specified delay (in milliseconds).
+setInterval : is a build javascript function that lets you run the code in a certain interval
+----------------------------------------------------------------------
+currying : it is taking multiple arguments as series of functions 
+-------------------------------------------------------------------------
+for → counter-based, runs until condition is false.
+
+for...in → loops over keys (object properties or array indexes).
+
+for...of → loops over values of iterables (arrays, strings, etc).
+
+forEach → array method, executes a callback on each element.
+
+-------------------------------------------------------------------------
+callback: : function which is passed as an argument in another function 
+-------------------------------------------------------------------------
+Callback Hell = deeply nested callbacks (ugly code).
+
+===========================================
+
+Solved using Promises or async/await.
+
+A Promise in JavaScript is an object that represents the result of an asynchronous operation.
+states of promise:
+*pending
+*fullfilled
+*rejected
+
+async → makes a function return a Promise.
+
+await → waits for the Promise to finish (resolve/reject).
+
+Together, they make async code readable, maintainable, and clean.
+===========================================
+
+destructuring: it is etracting elements from an array into single variable 
+---------------------------------------------------------------------------
+Shallow Copy → it copies first level elements and changes will affect the original
+
+Deep Copy → it copies all level of elements and changes does not affect the original 
+--------------------------------------------------------------------------
+ternary operator:short form of if-else statement
+its called ternary operator.it has three operands 
+condition ? expressionIfTrue : expressionIfFalse
+---------------------------------------------------------------------------
+higher-order: it is the function which takes one or more function as argument or return a function as a result 
+
+A generator function : generator function is used to pause or resume the execution of the code 
+
+---------------------------------------------------------------------------
+workflow of JS:
+JavaScript workflow starts with creating the Global Execution Context, which has a memory phase (hoisting) and an execution phase. It uses a single-threaded call stack to run code. Objects go into the heap. For async tasks, the event loop coordinates between the call stack, Web APIs, and callback/microtask queues to ensure non-blocking execution.
+--------------------------------------------------------------------------
+asynchronous :
+asynchronous means that tasks don’t block the execution of other code. Normally, JavaScript is single-threaded and executes tasks one after another, but with asynchronous operations like API calls, timers, 
+or file reading, the code doesn’t wait for the task to finish. Instead, it continues executing the rest of the program, and once the async task completes, its result is handled through callbacks, promises, or async/await. 
+This non-blocking nature makes applications more efficient and responsive, especially when dealing with slow operations like server requests.
+
+***********************************************************************
