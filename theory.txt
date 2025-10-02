@@ -47,8 +47,10 @@ types of functions :
 --> immediate invoked function
 
 ? what is pure function 
+--> it the function which gives same output for same input 
 
 ? arrow function vs normal function 
+--> arrow function does not have its own this keyword but it will use this keyword from its surrownding scope 
 -------------------------------------------------------------------------
 Parameters → the argument passes throgh Parameters
 
