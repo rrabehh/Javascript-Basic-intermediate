@@ -5,6 +5,11 @@ WEEK-7
  JavaScript (JS) is a programming language mainly used to 
  make websites interactive and dynamic.
 
+? static typed vs dynamix typing 
+--> static typing : safety + performance
+--> dynamic typing : flexibility + ease of use
+
+
  execution context :
   ===============
   the environment where a piece of JavaScript code
@@ -46,6 +51,15 @@ types of functions :
 --> generator Function
 --> immediate invoked function
 
+-------------------------------------------------------------------------
+? String method
+--> string methods are built-in functions used to manipulate and process text
+eg : .toUpperCase() , .toLowerCase() , .toString() , .replace() etc...
+
+? Number method
+--> number methods in JavaScript are used to format or work with numerical values
+eg : Math.sqrt() , Number.isInteger() , .toString() etc...
+-------------------------------------------------------------------------
 ? what is pure function 
 --> it the function which gives same output for same input 
 
@@ -180,8 +194,10 @@ Together, they make async code readable, maintainable, and clean.
 destructuring: it is etracting elements from an array into single variable 
 ---------------------------------------------------------------------------
 Shallow Copy → it copies first level elements and changes will affect the original
+(using spread operator)
 
 Deep Copy → it copies all level of elements and changes does not affect the original 
+(using JSON)
 --------------------------------------------------------------------------
 ternary operator:short form of if-else statement
 its called ternary operator.it has three operands 
